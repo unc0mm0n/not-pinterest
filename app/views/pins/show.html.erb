@@ -2,10 +2,9 @@
 
 <blockquote class="well">
   <%= link_to image_tag(@pin.image.url(:large)), @pin.image.url(:original) %>
-  <%= %> </br>
-
   <%= @pin.description %>
   <footer><%= @pin.user.name %></footer>
 </blockquote>
 <%= link_to 'Edit', edit_pin_path(@pin) %> |
+<%= link_to 'Delete', @pin, method: :delete, data: { confirm: 'Are you sure?' } %> |
 <%= link_to 'Back', pins_path %>

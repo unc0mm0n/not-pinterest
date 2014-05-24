@@ -1,6 +1,6 @@
 class Pin < ActiveRecord::Base
 
-  has_attached_file :image, :styles => {:medium => "320x240>", :large => "960x640>"}
+  has_attached_file :image, :styles => {:medium => "220x500>", :large => "960x640>"}
   belongs_to :user
 
   validates :description, :presence => true
