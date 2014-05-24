@@ -5,7 +5,7 @@ Notpinterest::Application.routes.draw do
 
   devise_for :users
   # You can have the root of your site routed with "root"
-  root :to => 'pages#home'
+  root :to => 'pins#index'
 
   get 'about' => 'pages#about'
   # The priority is based upon order of creation: first created -> highest priority.
