@@ -1,12 +1,13 @@
 <tr>
-    <td class='col-md-4'><%= pin.description %></td>
-    <td class='col-md-4'><%= pin.user.name %></td>
-    <td class='col-md-2'><%= link_to 'Show', pin %></td>
+    <td><%= image_tag pin.image(:medium) %> </td>
+    <td><%= pin.description %></td>
+    <td><%= pin.user.name %></td>
     <% if current_user == pin.user %>
-      <td class='col-md-2'><%= link_to 'Edit', edit_pin_path(pin) %></td>
-      <td class='col-md-2'><%= link_to 'Delete', pin, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      <td><%= link_to 'Show', pin %></td>
+      <td><%= link_to 'Edit', edit_pin_path(pin) %></td>
+      <td><%= link_to 'Delete', pin, method: :delete, data: { confirm: 'Are you sure?' } %></td>
     <% else %>
-      <td class='col-md-2'></td>
-      <td class='col-md-2'></td>
+      <td><%= link_to 'Show', pin %></td>
+      <td></td><td></td>
     <% end %>
 </tr>

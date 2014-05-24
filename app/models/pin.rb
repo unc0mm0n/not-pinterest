@@ -1,6 +1,13 @@
 class Pin < ActiveRecord::Base
 
-  validates :description, :presence => true
-
+  has_attached_file :image, :styles => {:medium => "320x240>", :large => "960x640>"}
   belongs_to :user
+
+  validates :description, :presence => true
+  validates :user_id, :presence => true
+  validates_attachment :image, :presence => true
+
+# Validate content type
+  validates_attachment_content_type :image, :content_type => /\Aimage/
+
 end

@@ -4,6 +4,7 @@ source 'https://rubygems.org'
 gem 'rails', '4.0.2'
 gem 'devise'
 gem 'simple_form', :git => 'git://github.com/plataformatec/simple_form.git'
+gem 'paperclip', '~> 4.1'
 
 group :production do
   gem 'pg'
